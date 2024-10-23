@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Operación Sonrisa - Ayuda médica gratuita para pacientes con fisura labio palatina.">
+    <title>Operación Sonrisa</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #008cba;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header img {
+            max-height: 50px;
+        }
+        header nav {
+            margin-top: 10px;
+        }
+        header nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        header nav a:hover {
+            background-color: #005f8b;
+        }
+
+        /* Estilo para las secciones */
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        section h2 {
+            color: #008cba;
+            text-align: center;
+        }
+        section p {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .container div {
+            flex: 1;
+            padding: 20px;
+            margin: 10px;
+            max-width: 300px;
+            background-color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .container div:hover {
+            transform: scale(1.05);
+        }
+        .container img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    /* Estilo de las tarjetas del Blog */
+    .blog-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+    }
+    .blog-card {
+        background-color: #fff;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        max-width: 300px;
+        overflow: hidden;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+    .blog-card img {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #ddd;
+    }
+    .blog-card h3 {
+        color: #008cba;
+        padding: 15px 0 5px;
+    }
+    .blog-card p {
+        padding: 0 15px 15px;
+        font-size: 16px;
+    }
+    .blog-card a.button {
+        display: inline-block;
+        background-color: #008cba;
+        color: white;
+        padding: 10px 15px;
+        margin-bottom: 15px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .blog-card a.button:hover {
+        background-color: #005f8b;
+    }
+    .blog-card:hover {
+        transform: scale(1.05);
+    }
+
+    /* Estilo responsivo */
+    @media (max-width: 768px) {
+        .blog-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+        
+        /* Botones destacados */
+        a.button {
+            background-color: #ff6600;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        a.button:hover {
+            background-color: #e65c00;
+        }
+
+        /* Carrusel de imágenes */
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .carousel img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+        .carousel img:active {
+            transform: scale(1.05);
+        }
+        .slide {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+
+        /* Estilo de pie de página */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* Estilos de transición suave en desplazamiento */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .container div {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="img/cropped-LOGO-OSP-256x47.webp" alt="Logotipo Operación Sonrisa">
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-nosotros">Sobre Nosotros</a>
+        <a href="#como-ayudamos">Cómo Ayudamos</a>
+        <a href="#casos-exitosos">Casos Exitosos</a>
+        <a href="#como-ayudar">Cómo Puedes Ayudar</a>
+        <a href="#blog">Blog</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#fqs">FQS</a>
+    </nav>
+</header>
+
+<!-- Inicio -->
+<section id="inicio">
+    <h2>¡Bienvenido a Operación Sonrisa!</h2>
+    <p>Transformamos vidas a través de cirugías reconstructivas para niños con fisura labio palatina. Ayúdanos a devolverles la sonrisa y un futuro lleno de oportunidades.</p>
+    <a href="#form-donacion" class="button">¡Dona Ahora!</a>
+</section>
+
+<!-- Sobre nosotros -->
+<section id="sobre-nosotros">
+    <h2>Sobre Nosotros</h2>
+    <div class="container">
+        <div>
+            <img src="img/Foto-equipo-medico-Peru-600x377.webp" alt="Equipo médico">
+            <p>Somos un equipo dedicado de médicos, voluntarios y donantes, comprometidos a proporcionar cirugías gratuitas a niños de bajos recursos.</p>
+        </div>
+        <div>
+            <img src="img/USA_2014_Global_Hdq_Exteriors_Night_076_web-600x400.webp" alt="Voluntarios">
+            <p>Con más de 20 años de experiencia, hemos ayudado a miles de niños alrededor del mundo a recuperar su sonrisa.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Cómo Ayudamos -->
+<section id="como-ayudamos">
+    <h2>Cómo Ayudamos</h2>
+    <p>Ofrecemos una atención médica integral que incluye cirugías reconstructivas, apoyo psicológico y terapias de lenguaje para asegurar una recuperación completa.</p>
+</section>
+
+<!-- Casos Exitosos (con carrusel de imágenes) -->
+<section id="casos-exitosos">
+    <h2>Casos Exitosos</h2>
+    <div class="carousel">
+        <img class="slide active" src="img/caso1.webp" alt="Caso exitoso 1">
+        <img class="slide" src="img/caso2.jpg" alt="Caso exitoso 2">
+        <img class="slide" src="img/caso3.jpg" alt="Caso exitoso 3">
+    </div>
+</section>
+
+<!-- Cómo Puedes Ayudar -->
+<section id="como-ayudar">
+    <h2>Cómo Puedes Ayudar</h2>
+    <div class="container">
+        <div>
+            <img src="img/HND_2016_Tegucigalpa_200_Erick-Bermudes_Before_006.png" alt="Donar">
+            <p>Con tu donación, puedes financiar una cirugía que transformará la vida de un niño.</p>
+            <a href="#form-donacion" class="button">Donar Ahora</a>
+        </div>
+        <div>
+            <img src="img/volun.jpg" alt="Ser voluntario">
+            <p>Únete a nuestro equipo como voluntario y ayuda a crear un impacto duradero en las vidas de los niños.</p>
+            <a href="#form-voluntario" class="button">Quiero Ser Voluntario</a>
+        </div>
+    </div>
+</section>
+
+<!-- Blog (con imágenes y texto) -->
+<section id="blog">
+    <h2>Blog</h2>
+    <div class="blog-container">
+        <div class="blog-card">
+            <img src="img/blog1.webp" alt="Imagen del artículo 1">
+            <div class="blog-content">
+                <h3>Título del Artículo 1</h3>
+                <p>Conoce la historia de Juan, un niño que recuperó su sonrisa gracias a nuestra intervención.</p>
+                <a href="#" class="button">Leer más</a>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <img src="img/blog2.webp" alt="Imagen del artículo 2">
+            <div class="blog-content">
+                <h3>Título del Artículo 2</h3>
+                <p>Descubre cómo nuestra última campaña de donaciones cambió la vida de cientos de niños.</p>
+                <a href="#" class="button">Leer más</a>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <img src="img/blog3.webp" alt="Imagen del artículo 3">
+            <div class="blog-content">
+                <h3>Título del Artículo 3</h3>
+                <p>Te mostramos el impacto del voluntariado en el bienestar de los niños con fisura labio palatina.</p>
+                <a href="#" class="button">Leer más</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Contacto -->
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p>Si tienes preguntas o deseas más información sobre cómo colaborar, contáctanos en:</p>
+    <p>Correo: <a href="mailto:info@operacionsonrisa.org">info@operacionsonrisa.org</a></p>
+    <p>Teléfono: +34 123 456 789</p>
+</section>
+
+<!-- FQS (Preguntas Frecuentes) -->
+<section id="fqs">
+    <h2>Preguntas Frecuentes</h2>
+    <h3>¿Qué es la fisura labio palatina?</h3>
+    <p>Es una malformación congénita que afecta el labio y el paladar, dificultando la alimentación, el habla y el desarrollo del niño.</p>
+
+    <h3>¿Cómo puedo hacer una donación?</h3>
+    <p>Puedes realizar una donación a través de nuestro formulario en línea o contactar directamente con nuestro equipo para más opciones.</p>
+
+    <h3>¿Cómo puedo ser voluntario?</h3>
+    <p>Visita nuestra sección de <a href="#como-ayudar">Cómo Puedes Ayudar</a> para más información sobre el voluntariado.</p>
+</section>
+
+<!-- Pie de página -->
+<footer>
+    <p>Síguenos en nuestras redes sociales:</p>
+    <a href="https://facebook.com">Facebook</a>
+    <a href="https://twitter.com">Twitter</a>
+    <a href="https://instagram.com">Instagram</a>
+    <p><a href="terminos-legales.html">Términos legales</a></p>
+</footer>
+
+<script>
+    // Carrusel de imágenes
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+    const showSlides = () => {
+        slides.forEach((slide, index) => {
+            slide.style.display = (index === slideIndex) ? "block" : "none";
+        });
+        slideIndex = (slideIndex + 1) % slides.length;
+        setTimeout(showSlides, 3000); // Cambia cada 3 segundos
+    }
+    showSlides();
+</script>
+
+</body>
+</html>
+
